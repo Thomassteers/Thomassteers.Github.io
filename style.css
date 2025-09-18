@@ -1,0 +1,37 @@
+html {
+    --text: #e6f7df;
+    --background: #071004;
+    --primary: #87e19d;
+    --secondary: #214e87;
+    --accent: #3ed0c6;
+}
+
+body {
+    color: var(--text);
+    background: var(--background);
+}
+
+h1,
+h2,
+h3 {
+    color: var(primary);
+}
+
+p {
+    background: var(--accent);
+}
+
+li::marker{
+    color: var(--secondary);
+}
+
+img {
+    padding: 10px;
+    border: 10px solid var(--secondary);
+    border-radius: 20px;
+    background: var(--primary);
+}
+
+audio {
+    background: var(secondary);
+}
