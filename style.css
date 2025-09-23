@@ -10,13 +10,17 @@ body {
     color: var(--text);
     background: var(--background);
     font-family: "Oswald";
+    font-size: 1.2rem;
+    text-decoration: underline overline #ff3028;
+    font-variant: small-caps slashed-zero;
 }
 
 h1,
 h2,
 h3 {
     color: var(primary);
-    font-family: "Montserrat"
+    font-family: "Montserrat";
+    font-weight: lighter;
 }
 
 p {
