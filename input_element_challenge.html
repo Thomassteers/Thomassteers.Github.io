@@ -70,7 +70,7 @@
         <label><input type="radio" name="mode" value="Dark"> Dark</label>
         <label><input type="radio" name="mode" value="System" checked> System</label>
         <button id="btnSubmit">Submit</button>
-    <div class="output" id="modeOutput"></div>
+        <div class="output" id="modeOutput"></div>
     </section>
 
     <script>
@@ -84,12 +84,12 @@
             let name = nameInput.value;
             let age = ageInput.value
             greetingOutput.innerText = "Hello" + name + "you are" + age + "years old";
-            
+
         });
-          
-        
-            // TODO: Display a message like "Hello NAME, you are AGE years old!"
-            // Challenge: If age < 13, show "You're just a kid!" instead.
+
+
+        // TODO: Display a message like "Hello NAME, you are AGE years old!"
+        // Challenge: If age < 13, show "You're just a kid!" instead.
 
 
         // --- PART 2 ---
@@ -97,6 +97,10 @@
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
 
+        colorInput.addEventlistener("input", () => {
+            colorOutput.style.backgroundColor = colorInput.value;
+            colorOutput.innerText = "Hex " + colorInput.value + ", Volume " + volumeInput.value;
+        });
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
 
