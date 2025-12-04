@@ -23,11 +23,10 @@ function makeSentence() {
 
 
 // Event listener for button click
-document.getElementById("generateBtn").addEventListener("click", makeSentence);
+document.getElementById("generateBtn").addEventListener("click", makeSentence); 
 
 
 // Extra event listener: live preview when typing adjective
 document.getElementById("adjInput").addEventListener("input", function() {
   document.getElementById("outputArea").textContent = "Typing adjective: " + this.value;
 });
-
