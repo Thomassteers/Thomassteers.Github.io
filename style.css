@@ -1,59 +1,61 @@
-
-
 html {
-    --text: #e6f7df;
-    --background: #071004;
-    --primary: #87e19d;
-    --secondary: #214e87;
-    --accent: #3ed0c6;
+  --text: #e6f7df;
+  --background: #071004;
+  --primary: #87e19d;
+  --secondary: #214e87;
+  --accent: #3ed0c6;
 }
 
 body {
-    color: var(--text);
-    background: var(--background);
-    font-family: "Oswald";
-    font-size: 1.2rem;
-    text-decoration: underline overline #ff3028;
-    font-variant: small-caps slashed-zero;
+  color: var(--text);
+  background: var(--background);
+  font-family: "Oswald";
+  font-size: 1.2rem;
+  text-decoration: underline overline #ff3028;
+  font-variant: small-caps slashed-zero;
 }
 
 h1,
 h2,
 h3 {
-    color: var(primary);
-    font-family: "Montserrat";
-    font-weight: lighter;
+  color: var(primary);
+  font-family: "Montserrat";
+  font-weight: lighter;
 }
 
 p {
-    background: var(--accent);
+  background: var(--accent);
 }
 
-li::marker{
-    color: var(--secondary);
+li::marker {
+  color: var(--secondary);
 }
 
 img {
-    padding: 10px;
-    border: 10px solid var(--secondary);
-    border-radius: 20px;
-    background: var(--primary);
+  padding: 10px;
+  border: 10px solid var(--secondary);
+  border-radius: 20px;
+  background: var(--primary);
 }
 
 audio {
-    background: var(secondary);
+  background: var(secondary);
 }
+
 body {
   font-family: sans-serif;
 }
+
 p,
 ul {
   border: 4px solid rebeccapurple;
   padding: 0.2em;
 }
-*{
-    border: 2px solid orange;
+
+* {
+  border: 2px solid orange;
 }
+
 div {
   background-color: #8cffa0;
   height: 150px;
@@ -68,29 +70,41 @@ p {
 p:first-child {
   margin-top: 0;
 }
+
 div {
   border: 2px solid white;
 }
+
 element {
   border: 3px dashed #3498db;
 }
+
 .element {
   padding: 20px;
 }
+
 .element {
   padding-top: 10px;
   padding-right: 15px;
   padding-bottom: 20px;
   padding-left: 25px;
 }
+
 .element {
   margin: 20px;
 }
+
 .element {
   margin-top: 10px;
   margin-bottom: 30px;
 }
+
 .element {
   width: 300px;
   height: 150px;
+}
+
+.block {
+  display: block;
+  width: fit-content;
 }
