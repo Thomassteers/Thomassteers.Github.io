@@ -4,7 +4,7 @@ function makeSentence() {
   let verb = document.getElementById("verbInput").value;
   let adjective = document.getElementById("adjInput").value;
 
-  
+
   if (noun === "" || verb === "" || adjective === "") {
     document.getElementById("outputArea").textContent = "Please fill in all three words!";
     return;
@@ -15,8 +15,8 @@ function makeSentence() {
   document.getElementById("outputArea").textContent = sentence;
 }
 
-document.getElementById("generateBtn").addEventListener("click", makeSentence); 
+document.getElementById("generateBtn").addEventListener("click", makeSentence);
 
-document.getElementById("adjInput").addEventListener("input", function() {
+document.getElementById("adjInput").addEventListener("input", function () {
   document.getElementById("outputArea").textContent = "Typing adjective: " + this.value;
 });
