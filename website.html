@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Over/Under Picker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 8px 0;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .choice-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .choice-buttons button {
+      flex: 1;
+      background-color: #eee;
+      border: 2px solid #aaa;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    /* Highlighted button style */
+    .active {
+      background-color: #4CAF50;
+      color: white;
+      border-color: #2e7d32;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Over / Under Game</h2>
+
+  <label>Team or Player Name:</label>
+  <input type="text" id="nameInput" placeholder="e.g., Lakers or LeBron James">
+
+  <label>Amount of Money:</label>
+  <input type="number" id="moneyInput" placeholder="Enter amount">
+
+  <div class="choice-buttons">
+    <button id="overBtn">Over</button>
+    <button id="underBtn">Under</button>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    let selectedChoice = null;
+
+    function handlePick(choice, buttonElement) {
+      let name = document.getElementById("nameInput").value;
+      let money = document.getElementById("moneyInput").value;
+
+      // Remove highlight from both buttons
+      document.getElementById("overBtn").classList.remove("active");
+      document.getElementById("underBtn").classList.remove("active");
+
+      // Highlight the clicked button
+      buttonElement.classList.add("active");
+
+      selectedChoice = choice;
+
+      if (name === "" || money === "") {
+        document.getElementById("result").textContent =
+          "Please enter a name and amount first.";
+        return;
+      }
+
+      document.getElementById("result").textContent =
+        `You picked ${choice} on ${name} with $${money}.`;
+    }
+
+    document.getElementById("overBtn").addEventListener("click", function() {
+      handlePick("OVER", this);
+    });
+
+    document.getElementById("underBtn").addEventListener("click", function() {
+      handlePick("UNDER", this);
+    });
+  </script>
+
+</body>
+</html>
